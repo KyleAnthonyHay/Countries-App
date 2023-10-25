@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		851EBB152AE961A0007F010F /* CountriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851EBB142AE961A0007F010F /* CountriesViewController.swift */; };
 		85B6AA8E2AE80BB700CDF4C0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B6AA8D2AE80BB700CDF4C0 /* AppDelegate.swift */; };
 		85B6AA902AE80BB700CDF4C0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B6AA8F2AE80BB700CDF4C0 /* SceneDelegate.swift */; };
 		85B6AA922AE80BB700CDF4C0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B6AA912AE80BB700CDF4C0 /* ViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		851EBB142AE961A0007F010F /* CountriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesViewController.swift; sourceTree = "<group>"; };
 		85B6AA8A2AE80BB700CDF4C0 /* CountriesApp-Kyle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CountriesApp-Kyle.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		85B6AA8D2AE80BB700CDF4C0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		85B6AA8F2AE80BB700CDF4C0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -63,6 +65,7 @@
 				85B6AA962AE80BB800CDF4C0 /* Assets.xcassets */,
 				85B6AA982AE80BB800CDF4C0 /* LaunchScreen.storyboard */,
 				85B6AA9B2AE80BB800CDF4C0 /* Info.plist */,
+				851EBB142AE961A0007F010F /* CountriesViewController.swift */,
 			);
 			path = "CountriesApp-Kyle";
 			sourceTree = "<group>";
@@ -141,6 +144,7 @@
 				85B6AA922AE80BB700CDF4C0 /* ViewController.swift in Sources */,
 				85B6AA8E2AE80BB700CDF4C0 /* AppDelegate.swift in Sources */,
 				85B6AA902AE80BB700CDF4C0 /* SceneDelegate.swift in Sources */,
+				851EBB152AE961A0007F010F /* CountriesViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
