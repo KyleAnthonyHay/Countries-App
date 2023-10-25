@@ -22,6 +22,7 @@ struct CountriesAPI{
         let url = URL(string: "https://restcountries.com/v3.1/all?fields=name,flags")!// create URL
         let urlRequest = URLRequest(url: url)// create request from URL
         let (data, _) = try await urlSession.data(for: urlRequest) //open "URL session" with created request
+        // error handling
         let countries = try JSONDecoder().decode([CountryResponse].self, from: data) // Decode data retrieved
         
         return countries
