@@ -42,14 +42,19 @@ class CountriesViewController: UIViewController, UITableViewDataSource, UITableV
     }
     
 
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 60
+    }
     
     // MARK: - Delegate and Data Source
 
     // Delegate
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell(style: .default, reuseIdentifier: "myCell")
+        let cell = CountryTableViewCell(style: .default, reuseIdentifier: "countryCell")
         let country = countries[indexPath.row]
-        cell.textLabel?.text = country.name.common
+        cell.titleLabel.text = country.name.common
+        cell.subtitleLabel.text = country.name.official
+        cell.thumbnailView.loadImage(url: URL(string: country.flags.png)!)
         
         return cell
     }

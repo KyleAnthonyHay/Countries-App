@@ -16,6 +16,7 @@
 		85B6AA952AE80BB700CDF4C0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85B6AA932AE80BB700CDF4C0 /* Main.storyboard */; };
 		85B6AA972AE80BB800CDF4C0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85B6AA962AE80BB800CDF4C0 /* Assets.xcassets */; };
 		85B6AA9A2AE80BB800CDF4C0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85B6AA982AE80BB800CDF4C0 /* LaunchScreen.storyboard */; };
+		85CA7AD22AF2F61000BCDD7D /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85CA7AD12AF2F61000BCDD7D /* UIImageView+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		85B6AA962AE80BB800CDF4C0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		85B6AA992AE80BB800CDF4C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		85B6AA9B2AE80BB800CDF4C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		85CA7AD12AF2F61000BCDD7D /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +70,7 @@
 				851EBB142AE961A0007F010F /* CountriesViewController.swift */,
 				851EBB162AE972D2007F010F /* CountriesAPI.swift */,
 				851EBB182AE9A721007F010F /* CountryTableViewCell.swift */,
+				85CA7AD12AF2F61000BCDD7D /* UIImageView+Extension.swift */,
 				85B6AA932AE80BB700CDF4C0 /* Main.storyboard */,
 				85B6AA962AE80BB800CDF4C0 /* Assets.xcassets */,
 				85B6AA982AE80BB800CDF4C0 /* LaunchScreen.storyboard */,
@@ -149,6 +152,7 @@
 			files = (
 				851EBB192AE9A722007F010F /* CountryTableViewCell.swift in Sources */,
 				851EBB172AE972D2007F010F /* CountriesAPI.swift in Sources */,
+				85CA7AD22AF2F61000BCDD7D /* UIImageView+Extension.swift in Sources */,
 				85B6AA922AE80BB700CDF4C0 /* ViewController.swift in Sources */,
 				85B6AA8E2AE80BB700CDF4C0 /* AppDelegate.swift in Sources */,
 				85B6AA902AE80BB700CDF4C0 /* SceneDelegate.swift in Sources */,
