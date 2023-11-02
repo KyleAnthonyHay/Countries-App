@@ -21,6 +21,10 @@ class CountriesViewController: UIViewController, UITableViewDataSource, UITableV
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        navigationController?.tabBarItem.image = UIImage(systemName: "globe.americas")
+        navigationController?.tabBarItem.title = "Countries"
+        navigationItem.title = "All Countries"
 
         view.addSubview(tableView)
         tableView.translatesAutoresizingMaskIntoConstraints = false

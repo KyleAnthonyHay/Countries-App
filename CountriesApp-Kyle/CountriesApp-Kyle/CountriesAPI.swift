@@ -21,8 +21,17 @@ struct CountriesAPI{
     func allCountries() async throws -> [CountryResponse]{
         let url = URL(string: "https://restcountries.com/v3.1/all?fields=name,flags")!// create URL
         let urlRequest = URLRequest(url: url)// create request from URL
-        let (data, _) = try await urlSession.data(for: urlRequest) //open "URL session" with created request
+        let (data, response) = try await urlSession.data(for: urlRequest) //open "URL session" with created request
+        
         // error handling
+        guard let response = response as? HTTPURLResponse else {
+                    throw CountriesAPIError.requestFailed(message: "Response is not HTTPURLResponse.")
+                }
+
+                guard 200...299 ~= response.statusCode else {
+                    throw CountriesAPIError.requestFailed(message: "Status Code should be 2xx, but is \(response.statusCode).")
+                }
+        
         let countries = try JSONDecoder().decode([CountryResponse].self, from: data) // Decode data retrieved
         
         return countries
@@ -46,4 +55,9 @@ struct CountryResponse: Codable {
     // actual variables
     let name: Name
     let flags: Flag
+}
+
+// MARK: Error Handling
+enum CountriesAPIError: Error{
+    case requestFailed(message: String)
 }
