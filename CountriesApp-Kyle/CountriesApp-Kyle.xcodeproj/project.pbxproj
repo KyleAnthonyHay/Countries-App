@@ -10,9 +10,9 @@
 		851EBB152AE961A0007F010F /* CountriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851EBB142AE961A0007F010F /* CountriesViewController.swift */; };
 		851EBB172AE972D2007F010F /* CountriesAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851EBB162AE972D2007F010F /* CountriesAPI.swift */; };
 		851EBB192AE9A722007F010F /* CountryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851EBB182AE9A721007F010F /* CountryTableViewCell.swift */; };
+		853158CD2AFC06F0008719A4 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853158CC2AFC06F0008719A4 /* SettingsViewController.swift */; };
 		85B6AA8E2AE80BB700CDF4C0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B6AA8D2AE80BB700CDF4C0 /* AppDelegate.swift */; };
 		85B6AA902AE80BB700CDF4C0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B6AA8F2AE80BB700CDF4C0 /* SceneDelegate.swift */; };
-		85B6AA922AE80BB700CDF4C0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B6AA912AE80BB700CDF4C0 /* ViewController.swift */; };
 		85B6AA952AE80BB700CDF4C0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85B6AA932AE80BB700CDF4C0 /* Main.storyboard */; };
 		85B6AA972AE80BB800CDF4C0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85B6AA962AE80BB800CDF4C0 /* Assets.xcassets */; };
 		85B6AA9A2AE80BB800CDF4C0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85B6AA982AE80BB800CDF4C0 /* LaunchScreen.storyboard */; };
@@ -23,10 +23,10 @@
 		851EBB142AE961A0007F010F /* CountriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesViewController.swift; sourceTree = "<group>"; };
 		851EBB162AE972D2007F010F /* CountriesAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesAPI.swift; sourceTree = "<group>"; };
 		851EBB182AE9A721007F010F /* CountryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryTableViewCell.swift; sourceTree = "<group>"; };
+		853158CC2AFC06F0008719A4 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		85B6AA8A2AE80BB700CDF4C0 /* CountriesApp-Kyle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CountriesApp-Kyle.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		85B6AA8D2AE80BB700CDF4C0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		85B6AA8F2AE80BB700CDF4C0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		85B6AA912AE80BB700CDF4C0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		85B6AA942AE80BB700CDF4C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		85B6AA962AE80BB800CDF4C0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		85B6AA992AE80BB800CDF4C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -66,7 +66,6 @@
 			children = (
 				85B6AA8D2AE80BB700CDF4C0 /* AppDelegate.swift */,
 				85B6AA8F2AE80BB700CDF4C0 /* SceneDelegate.swift */,
-				85B6AA912AE80BB700CDF4C0 /* ViewController.swift */,
 				851EBB142AE961A0007F010F /* CountriesViewController.swift */,
 				851EBB162AE972D2007F010F /* CountriesAPI.swift */,
 				851EBB182AE9A721007F010F /* CountryTableViewCell.swift */,
@@ -75,6 +74,7 @@
 				85B6AA962AE80BB800CDF4C0 /* Assets.xcassets */,
 				85B6AA982AE80BB800CDF4C0 /* LaunchScreen.storyboard */,
 				85B6AA9B2AE80BB800CDF4C0 /* Info.plist */,
+				853158CC2AFC06F0008719A4 /* SettingsViewController.swift */,
 			);
 			path = "CountriesApp-Kyle";
 			sourceTree = "<group>";
@@ -152,8 +152,8 @@
 			files = (
 				851EBB192AE9A722007F010F /* CountryTableViewCell.swift in Sources */,
 				851EBB172AE972D2007F010F /* CountriesAPI.swift in Sources */,
+				853158CD2AFC06F0008719A4 /* SettingsViewController.swift in Sources */,
 				85CA7AD22AF2F61000BCDD7D /* UIImageView+Extension.swift in Sources */,
-				85B6AA922AE80BB700CDF4C0 /* ViewController.swift in Sources */,
 				85B6AA8E2AE80BB700CDF4C0 /* AppDelegate.swift in Sources */,
 				85B6AA902AE80BB700CDF4C0 /* SceneDelegate.swift in Sources */,
 				851EBB152AE961A0007F010F /* CountriesViewController.swift in Sources */,

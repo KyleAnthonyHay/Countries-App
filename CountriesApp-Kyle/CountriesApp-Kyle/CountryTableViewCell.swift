@@ -22,6 +22,7 @@ class CountryTableViewCell: UITableViewCell {
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         
         self.thumbnailView = UIImageView()
+        self.thumbnailView.contentMode = .scaleAspectFill
         self.titleLabel = UILabel()
         self.subtitleLabel = UILabel()
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -33,10 +34,18 @@ class CountryTableViewCell: UITableViewCell {
         self.setUpConstraints()
     }
     
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        thumbnailView.layer.cornerRadius = thumbnailView.frame.width / 2
+        thumbnailView.layer.borderWidth = 2
+        thumbnailView.layer.borderColor = UIColor.darkGray.cgColor
+        thumbnailView.layer.masksToBounds = true
+    }
+    
     // function for setting up constraints
     
     private func setUpConstraints(){
-        let topPadding = 5.0
+                let topPadding = 5.0
                 let bottomPadding = 5.0
                 let leadingPadding = 15.0
                 let trailingPadding = 15.0

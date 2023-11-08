@@ -58,8 +58,11 @@ class CountriesViewController: UIViewController, UITableViewDataSource, UITableV
         let country = countries[indexPath.row]
         cell.titleLabel.text = country.name.common
         cell.subtitleLabel.text = country.name.official
-        cell.thumbnailView.loadImage(url: URL(string: country.flags.png)!)
-        
+        if let safeURL = URL(string: country.flags.png) {
+            cell.thumbnailView.loadImage(url: safeURL)
+        } else {
+            cell.thumbnailView.image = UIImage(systemName: "flag.slash.fill")
+        }
         return cell
     }
 
