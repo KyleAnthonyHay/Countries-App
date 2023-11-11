@@ -36,6 +36,24 @@ struct CountriesAPI{
         
         return countries
     }
+    
+    func getCountry(named countryName: String) async throws -> CountryResponse {
+        let url = URL(string: "https://restcountries.com/v3.1/name/\(countryName)")!
+        let urlRequest = URLRequest(url: url)
+        let (data, response) = try await urlSession.data(for: urlRequest) //open "URL session" with created request
+        
+        // error handling
+        guard let response = response as? HTTPURLResponse else {
+                    throw CountriesAPIError.requestFailed(message: "Response is not HTTPURLResponse.")
+                }
+
+                guard 200...299 ~= response.statusCode else {
+                    throw CountriesAPIError.requestFailed(message: "Status Code should be 2xx, but is \(response.statusCode).")
+                }
+        let country = try JSONDecoder().decode([CountryResponse].self, from: data).first! // this returns an array so we .first to collect the first/only element
+        
+        return country
+    }
 }
 
 
@@ -55,6 +73,18 @@ struct CountryResponse: Codable {
     // actual variables
     let name: Name
     let flags: Flag
+    
+    // getCountry(:named) variables
+    struct Currency: Codable {
+        let name: String
+        let symbol: String
+    }
+    
+    let population: Int?
+    let currencies: [String: Currency]? //dictionary
+    let languages: [String: String]?
+    let capital: [String]?
+    
 }
 
 // MARK: Error Handling
