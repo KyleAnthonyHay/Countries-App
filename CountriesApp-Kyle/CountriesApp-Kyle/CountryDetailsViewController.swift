@@ -16,7 +16,7 @@ class CountryDetailsViewController: UIViewController {
         let tableView = UITableView(frame: .zero, style: .grouped)
         tableView.dataSource = self
         tableView.delegate = self
-        
+        tableView.allowsSelection = false
         return tableView
     }()
     
@@ -75,7 +75,11 @@ extension CountryDetailsViewController: UITableViewDelegate, UITableViewDataSour
             cell.textLabel?.text = countryName
             cell.textLabel?.font = UIFont.preferredFont(forTextStyle: .largeTitle)
         case [0,1]:
-            break
+            let bannerCell = BannerTableViewCell(reuseIdentifier: "bannerCell")
+            bannerCell.delagate = self
+            guard let url = URL(string: countryData?.flags.png ?? "") else { break }
+            bannerCell.loadImage(url: url)
+            return bannerCell
         case [0,2]:
             cell.textLabel?.text = "Official Name"
             cell.detailTextLabel?.text = countryData?.name.official
@@ -106,4 +110,25 @@ extension CountryDetailsViewController: UITableViewDelegate, UITableViewDataSour
     func numberOfSections(in tableView: UITableView) -> Int {
         return 3
     }
+    
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        switch section{
+        case 1:
+            return "Country Info"
+        case 2:
+            return "Languages"
+            
+        default:
+            return nil
+        }
+    }
+}
+
+extension CountryDetailsViewController: BannerTableViewCellDelegate{
+    func requestLayoutUpdate() {
+        tableView.beginUpdates()
+        tableView.endUpdates()
+    }
+    
+    
 }

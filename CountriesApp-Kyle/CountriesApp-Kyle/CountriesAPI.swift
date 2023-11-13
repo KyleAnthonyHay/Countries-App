@@ -50,9 +50,9 @@ struct CountriesAPI{
                 guard 200...299 ~= response.statusCode else {
                     throw CountriesAPIError.requestFailed(message: "Status Code should be 2xx, but is \(response.statusCode).")
                 }
-        let country = try JSONDecoder().decode([CountryResponse].self, from: data).first! // this returns an array so we .first to collect the first/only element
+        let country = try JSONDecoder().decode([CountryResponse].self, from: data).first(where: {$0.name.common == countryName}) // this returns an array so we .first to collect the first/only element
         
-        return country
+        return country!
     }
 }
 
@@ -62,7 +62,7 @@ struct CountryResponse: Codable {
     struct Flag: Codable {
         let png: String
         let svg: String
-        let alt: String
+        let alt: String?
     }
     
     struct Name: Codable {
