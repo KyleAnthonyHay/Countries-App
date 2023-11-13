@@ -71,6 +71,11 @@ class CountriesViewController: UIViewController, UITableViewDataSource, UITableV
         return countries.count
     }
      
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let country = countries[indexPath.row]
+        let detailsViewController = CountryDetailsViewController(countryName: country.name.common)
+        navigationController?.pushViewController(detailsViewController, animated: true)
+    }
      
 
 }
